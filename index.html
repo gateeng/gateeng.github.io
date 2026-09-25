@@ -7,17 +7,17 @@
 :root{--bg:#070c16;--bg2:#0b1322;--card:#101a2c;--ink:#e8eef7;--muted:#8fa1b8;--line:#1d2b42;
 --cyan:#37b6ff;--green:#00e676;--deep:#0e5a9e}
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;
 background-image:
  radial-gradient(900px 500px at 70% -10%,rgba(30,110,190,.22),transparent 60%),
  radial-gradient(700px 420px at 10% 30%,rgba(0,180,120,.07),transparent 60%),
  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72"><g stroke="%23223a5c" stroke-width="1" opacity=".28"><path d="M0 24 H28 V52 H72 M36 0 V16 H60"/><circle cx="28" cy="24" r="2" fill="%23223a5c" stroke="none"/><circle cx="60" cy="16" r="2" fill="%23223a5c" stroke="none"/></g></svg>');
 }
-.wrap{max-width:940px;margin:0 auto;padding:0 22px}
+.wrap{max-width:940px;margin-left:auto;margin-right:auto;padding:0 22px;width:100%}
 a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}
 
 /* ── hero ─────────────────────────────────────────── */
-header{padding:84px 0 30px;text-align:center}
+header{padding:84px 0 0;text-align:center}
 .mark{width:150px;height:auto;display:block;margin:0 auto 8px}
 .mark .sig{fill:var(--green)}
 .mark .pulse{animation:pulse 2.4s ease-in-out infinite;transform-origin:102px 42px;filter:drop-shadow(0 0 7px rgba(0,230,118,.9))}
@@ -30,7 +30,7 @@ h1 .g{background:linear-gradient(92deg,var(--cyan),var(--green));-webkit-backgro
 .tag{color:var(--muted);font-size:1.1em;margin:.2em 0 0}
 
 /* ── sections ─────────────────────────────────────── */
-section{padding:34px 0}
+section{padding:0;margin-top:46px}
 h2{font-size:.9em;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin:0 0 18px}
 .apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px 22px;
@@ -56,7 +56,8 @@ display:flex;flex-direction:column;gap:10px;transition:transform .25s ease,box-s
 
 /* ── support / footer ─────────────────────────────── */
 .contact{border:1px solid var(--line);border-radius:16px;padding:24px;background:linear-gradient(180deg,rgba(30,110,190,.10),rgba(16,26,44,.4))}
-footer{padding:44px 0 56px;color:var(--muted);font-size:.85em;text-align:center}
+footer{margin-top:auto;padding:52px 0 40px;color:var(--muted);font-size:.85em;text-align:center}
+
 footer .legal a{color:var(--muted);margin:0 9px}
 @media(max-width:520px){header{padding-top:56px}.mark{width:120px}}
 </style></head><body>
@@ -80,7 +81,6 @@ footer .legal a{color:var(--muted);margin:0 9px}
 </header>
 
 <section class="wrap">
-  <h2>Apps</h2>
   <div class="apps">
     <a class="card cardlink" href="/truemileev/">
       <span class="badge test">CLOSED TESTING</span>
@@ -93,24 +93,14 @@ footer .legal a{color:var(--muted);margin:0 9px}
     <div class="card">
       <span class="badge soon">COMING SOON</span>
       <h3>AutoFlow</h3>
-      <p>Automation for repetitive desktop and mobile workflows — record once, run anywhere.
-      In final preparation for release on desktop and Google Play.</p>
+      <p>Flowcharts and brainstorm maps, made quickly on your phone. Lay out ideas, connect them,
+      and rearrange until the structure makes sense. In final preparation for release on Google Play.</p>
       <div class="links"></div>
     </div>
   </div>
 </section>
 
 <section class="wrap">
-  <h2>How we build</h2>
-  <div class="principles">
-    <div class="p"><b>No ads. No trackers.</b><span>Zero analytics SDKs in anything we ship — verified, not promised.</span></div>
-    <div class="p"><b>Your data is yours.</b><span>Collected only to power your own features. Deletable any time, in-app.</span></div>
-    <div class="p"><b>Real data beats ratings.</b><span>Our apps learn from what you actually do, not what a lab assumed.</span></div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>Support</h2>
   <div class="contact">
     <p style="margin:0">Questions, feedback, or account requests for any of our apps:
     <strong><a href="mailto:support@gateeng.com">support@gateeng.com</a></strong><br>
@@ -119,7 +109,7 @@ footer .legal a{color:var(--muted);margin:0 9px}
 </section>
 
 <footer class="wrap">
-  © 2026 Gate Engineering LLC
+  © 2026 Gate Engineering LLC · 2501 Chatham Rd 8139, Springfield, IL 62704 · (331) 224-4919
   <div class="legal">
     <a href="/truemileev/">TrueMile EV</a>
   </div>
